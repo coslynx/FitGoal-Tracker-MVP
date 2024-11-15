@@ -1,0 +1,116 @@
+{
+  "createGoal": {
+    "name": "createGoal",
+    "description": "Creates a new fitness goal",
+    "endpoint": "/api/goals",
+    "method": "POST",
+    "authRequired": true,
+    "validationSchema": "@utils/validators.validateGoalInput"
+  },
+  "getGoals": {
+    "name": "getGoals",
+    "description": "Retrieves all fitness goals for the current user",
+    "endpoint": "/api/goals",
+    "method": "GET",
+    "authRequired": true
+  },
+  "updateGoal": {
+    "name": "updateGoal",
+    "description": "Updates an existing fitness goal",
+    "endpoint": "/api/goals/:id",
+    "method": "PUT",
+    "authRequired": true,
+    "validationSchema": "@utils/validators.validateGoalInput"
+  },
+  "deleteGoal": {
+    "name": "deleteGoal",
+    "description": "Deletes a fitness goal",
+    "endpoint": "/api/goals/:id",
+    "method": "DELETE",
+    "authRequired": true
+  },
+  "createProgressEntry": {
+    "name": "createProgressEntry",
+    "description": "Creates a new progress entry",
+    "endpoint": "/api/progress",
+    "method": "POST",
+    "authRequired": true,
+    "validationSchema": "@utils/validators.validateProgressInput"
+  },
+  "getProgressEntries": {
+    "name": "getProgressEntries",
+    "description": "Retrieves progress entries for a given goal",
+    "endpoint": "/api/progress",
+    "method": "GET",
+    "authRequired": true
+  },
+  "updateProgressEntry": {
+    "name": "updateProgressEntry",
+    "description": "Updates an existing progress entry",
+    "endpoint": "/api/progress/:id",
+    "method": "PUT",
+    "authRequired": true,
+    "validationSchema": "@utils/validators.validateProgressInput"
+  },
+  "deleteProgressEntry": {
+    "name": "deleteProgressEntry",
+    "description": "Deletes a progress entry",
+    "endpoint": "/api/progress/:id",
+    "method": "DELETE",
+    "authRequired": true
+  },
+  "createPost": {
+    "name": "createPost",
+    "description": "Creates a new post in the social feed",
+    "endpoint": "/api/posts",
+    "method": "POST",
+    "authRequired": true,
+    "validationSchema": "@utils/validators.validatePostInput"
+  },
+  "getPosts": {
+    "name": "getPosts",
+    "description": "Retrieves posts from the social feed",
+    "endpoint": "/api/posts",
+    "method": "GET",
+    "authRequired": true
+  },
+  "updatePost": {
+    "name": "updatePost",
+    "description": "Updates an existing post",
+    "endpoint": "/api/posts/:id",
+    "method": "PUT",
+    "authRequired": true,
+    "validationSchema": "@utils/validators.validatePostInput"
+  },
+  "deletePost": {
+    "name": "deletePost",
+    "description": "Deletes a post",
+    "endpoint": "/api/posts/:id",
+    "method": "DELETE",
+    "authRequired": true
+  },
+  "registerUser": {
+    "name": "registerUser",
+    "description": "Registers a new user",
+    "endpoint": "/api/auth/register",
+    "method": "POST",
+    "authRequired": false,
+    "validationSchema": "@utils/validators.validateRegisterInput"
+  },
+  "loginUser": {
+    "name": "loginUser",
+    "description": "Logs in an existing user",
+    "endpoint": "/api/auth/login",
+    "method": "POST",
+    "authRequired": false,
+    "validationSchema": "@utils/validators.validateLoginInput"
+  },
+  "logoutUser": {
+    "name": "logoutUser",
+    "description": "Logs out the current user",
+    "endpoint": "/api/auth/logout",
+    "method": "GET",
+    "authRequired": true
+  }
+}
+```
